@@ -1,0 +1,19 @@
+
+
+.myfont{
+
+  font-size: 20px;
+
+}
+
+a{
+  color: black;
+}
+html{
+  background-color:#ffffff;
+}
+.half-rule {
+    margin-left: 100px;
+    text-align: left;
+    width: 50%;
+ }
