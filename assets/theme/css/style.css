@@ -1736,6 +1736,22 @@ textArea.form-flat {
 .map-content i {
   margin-right: 2px;
 }
+
+.my-map-area{
+	   position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-left: 1px solid @white - 20;
+    background: @white - 10;
+    @media (max-width: @res_tab) {
+      position:relative;
+      height: 300px;
+      width: 100%;
+    }
+	
+}
 /*== TESTIMONIAL == */
 .box-testimonial {
   margin: 0 auto;

@@ -12,7 +12,7 @@
     initLightBox();
     initTyped();
     initBtnFile();
-    initMap();
+ 
     initHold();
     initCaptcha();
     initAjaxContactForm();
@@ -321,26 +321,7 @@
     }
   }
 
-  //Map
-  function initMap() {
-    $('#map-contact').gmap({
-      'center': '37.773972,-122.431297',
-      'zoom': 12,
-      scrollwheel: false,
-      'disableDefaultUI': false,
-      'callback': function() {
-        var self = this;
-        self.addMarker({
-          'position': this.get('map').getCenter(),
-          icon: 'assets/theme/images/marker.png'
-        }).click(function() {
-          self.openInfoWindow({
-            'content': $('.map-contact-body').html()
-          }, this);
-        });
-      }
-    });
-  }
+   
 
   function initHold() {
     $('[data-holdwidth]').each(function(index, el) {
