@@ -1165,8 +1165,8 @@ textArea.form-flat {
 }
 .my-profile .my-pict {
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position:  inherit;
+  background-size:100% 100%;
   background-image: url(../images/my-pict.jpg);
   position: absolute;
   left: 0;
