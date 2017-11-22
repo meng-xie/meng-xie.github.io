@@ -47,6 +47,11 @@
           $.ajax({
             type: 'POST',
             data: params,
+            crossDomain: true,
+            headers: { 'Access-Control-Allow-Origin': '*' ,
+            	'Access-Control-Allow-Headers':'Content-Type',
+            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS'
+            },
             url: "php/sending_mail.php",
             beforeSend: function() {
               el.find('.preload-submit').removeClass('hidden');
