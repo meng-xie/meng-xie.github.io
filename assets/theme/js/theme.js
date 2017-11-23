@@ -49,7 +49,7 @@
             data: params,
             crossDomain: true,
             headers: { 'Access-Control-Allow-Origin': '*' ,
-            	'Access-Control-Allow-Headers':'Content-Type',
+            	'Access-Control-Allow-Headers':'Content-Type, Accept',
             	'Access-Control-Allow-Methods':'POST, GET, OPTIONS'
             },
             url: "php/sending_mail.php",
