@@ -48,7 +48,6 @@
             type: 'POST',
             data: params,
             crossDomain : true,
-            contentType: "application/json; charset=utf-8",
             dataType: "jsonp", // what type of data do we expect back from the server
             cache: false,
             async: false,
