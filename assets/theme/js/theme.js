@@ -48,7 +48,8 @@
             type: 'POST',
             data: params,
             crossDomain : true,
-            dataType: "json", // what type of data do we expect back from the server
+            contentType: "application/json",
+            dataType: "jsonp", // what type of data do we expect back from the server
             cache: false,
             async: false,
             headers: { 'Access-Control-Allow-Origin': '*' ,
@@ -156,6 +157,7 @@
   function initCaptcha() {
     $('#mycaptcha').simpleCaptcha({
       allowRefresh: false,
+      dataType:"jsonp",
       scriptPath: "assets/plugins/simpleCaptcha/simpleCaptcha.php"
     });
 
