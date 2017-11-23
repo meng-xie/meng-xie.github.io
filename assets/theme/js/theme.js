@@ -44,17 +44,18 @@
         var el = $(this);
         if (el.valid()) {
           var params = $(this).serialize();
-          $.ajax({
+ 
+          
+         $.ajax({
             type: 'POST',
             data: params,
             crossDomain : true,
-            contentType: "text/html",
-            dataType: "text/html", // what type of data do we expect back from the server
+            dataType: "jsonp",  
             cache: false,
-            async: false,
+            async: true,
             headers: { 'Access-Control-Allow-Origin': '*' ,
             	'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
-            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS' 
+            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS',
             },
             url:  "php/sending_mail.php",
             beforeSend: function() {
@@ -72,8 +73,14 @@
                   el.find('.message-submit').html(res.error).removeClass('hidden');
                 }
               }, 1000)
+            },
+            error:function(e){
+            	console.log( e);
             }
           });
+         
+          
+          
         }
         return false;
       });
