@@ -49,7 +49,7 @@
             data: params,
             crossDomain : true,
             contentType: "text/html",
-            dataType: "jsonp", // what type of data do we expect back from the server
+            dataType: "text/html", // what type of data do we expect back from the server
             cache: false,
             async: false,
             headers: { 'Access-Control-Allow-Origin': '*' ,
