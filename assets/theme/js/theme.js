@@ -47,13 +47,16 @@
           $.ajax({
             type: 'POST',
             data: params,
-            dataType: "text",
+            crossDomain : true,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json", // what type of data do we expect back from the server
+            cache: false,
             async: false,
             headers: { 'Access-Control-Allow-Origin': '*' ,
             	'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
             	'Access-Control-Allow-Methods':'POST, GET, OPTIONS' 
             },
-            url: "php/sending_mail.php",
+            url:  "php/sending_mail.php",
             beforeSend: function() {
               el.find('.preload-submit').removeClass('hidden');
               el.find('.message-submit').addClass('hidden');
