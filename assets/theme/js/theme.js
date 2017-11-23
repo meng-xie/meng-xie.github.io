@@ -43,42 +43,15 @@
       $('#contactForm, #hireForm').submit(function() {
         var el = $(this);
         if (el.valid()) {
-          var params = $(this).serialize();
+        
  
-          
-         $.ajax({
-            type: 'POST',
-            data: params,
-            crossDomain : true,
-            dataType: "jsonp",  
-            cache: false,
-            async: true,
-            headers: { 'Access-Control-Allow-Origin': '*' ,
-            	'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
-            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS',
-            },
-            url:  "php/sending_mail.php",
-            beforeSend: function() {
-              el.find('.preload-submit').removeClass('hidden');
-              el.find('.message-submit').addClass('hidden');
-            },
-            success: function(res) {
-              res = jQuery.parseJSON(res);
-              setTimeout(function() {
+        
                 el.find('.preload-submit').addClass('hidden');
-                if (res.error === null) {
+     
                   el.trigger('reset');
-                  el.find('.message-submit').html(res.msg).removeClass('hidden');
-                } else {
-                  el.find('.message-submit').html(res.error).removeClass('hidden');
-                }
-              }, 1000)
-            },
-            error:function(e){
-            	console.log( e);
-            }
-          });
-         
+                  el.find('.message-submit').html("  Thanks, I will get back to you ASAP").removeClass('hidden');
+                
+           
           
           
         }
