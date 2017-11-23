@@ -48,9 +48,13 @@
             type: 'POST',
             data: params,
             crossDomain: true,
+            crossOrigin: true,
+            dataType:'json',
+            async: false,
             headers: { 'Access-Control-Allow-Origin': '*' ,
-            	'Access-Control-Allow-Headers':'Content-Type, Accept',
-            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS'
+            	'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
+            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS',
+                'Content-Type': 'application/json'
             },
             url: "php/sending_mail.php",
             beforeSend: function() {
