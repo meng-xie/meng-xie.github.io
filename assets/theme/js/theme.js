@@ -44,15 +44,18 @@
         var el = $(this);
         if (el.valid()) {
         
- 
-        
-                el.find('.preload-submit').addClass('hidden');
-     
-                  el.trigger('reset');
-                  el.find('.message-submit').html("  Thanks, I will get back to you ASAP").removeClass('hidden');
-                
-           
-          
+           emailjs.send("myxj128@gmail.com","template_f1u9RwXl",{name: $("input[name*='fullname']").val(), email: $("input[name*='email']").val() , note: $("textarea[name*='message']").val()  })
+        	.then(function(response) {
+        			setTimeout(function() {
+                     el.find('.preload-submit').addClass('hidden');
+                       el.trigger('reset');
+                       el.find('.message-submit').html("Thanks I will get back!").removeClass('hidden');
+                     
+                   }, 1000)
+        	}, function(err) {
+        		  el.find('.message-submit').html("mail service is error!").removeClass('hidden');
+        	});
+        	
           
         }
         return false;
