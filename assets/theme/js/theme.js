@@ -47,14 +47,11 @@
           $.ajax({
             type: 'POST',
             data: params,
-            crossDomain: true,
-            crossOrigin: true,
-     
+            dataType: "text",
             async: false,
             headers: { 'Access-Control-Allow-Origin': '*' ,
             	'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
-            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS',
-            	 'contentType': "application/x-www-form-urlencoded; charset=utf-8"
+            	'Access-Control-Allow-Methods':'POST, GET, OPTIONS' 
             },
             url: "php/sending_mail.php",
             beforeSend: function() {
