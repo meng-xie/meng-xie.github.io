@@ -6,10 +6,8 @@ function myprint(){
 
 
 function openMap() {
-    var earthquakeAuth = {lat:37.773972, lng: -122.431297};
-
-              var earthquakeAuth2 = {lat:39.580302, lng: -120.496080};
-                      var earthquakeAuth3 = {lat:37.580302, lng: -120.496080};
+    var earthquakeAuth = {lat:37.335480, lng:-121.893028};
+           
      var map = new google.maps.Map(document.getElementById('map-contact'), {
         zoom:12,
         center: earthquakeAuth
