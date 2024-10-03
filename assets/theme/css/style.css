@@ -1169,7 +1169,7 @@ textArea.form-flat {
   background-size:48% 100%;
   background-image: url(../images/my-pict.jpg);
   position: absolute;
-  left: 503px;
+  left: 450px;
   top: 0;
   height: 100%;
 }
@@ -1216,10 +1216,10 @@ textArea.form-flat {
     width: 40%;
   }
 }
- .my-desc {
-position: relative;
-   width:40%;
-   left:50%;
+.my-desc {
+ position: relative;
+   width:33%;
+   left:47.3%;
 }
 .my-profile  .inner-text {
   max-width: 585px;
