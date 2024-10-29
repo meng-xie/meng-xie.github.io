@@ -1152,7 +1152,7 @@ textArea.form-flat {
   position: relative;
   display: inline-block;
   z-index: 3;
-  border-bottom: 1px solid #000000;
+
   padding: 10px;
   letter-spacing: 4px;
 }
