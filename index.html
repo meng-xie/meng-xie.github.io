@@ -79,11 +79,14 @@
 
       })();
 
-<!--      $("document").ready(function() {-->
-<!--        setTimeout(function() {-->
-<!--            $("#defaultLoadClick").click();-->
-<!--        },3000);-->
-<!--      });-->
+
+      $("document").ready(function() {
+        setTimeout(function() {
+
+             document.getElementById("defaultLoadClick").href =  document.location.href+"#about";
+             document.getElementById("defaultLoadClick").click();
+        },4000);
+      });
 
 
     </script>
@@ -107,7 +110,7 @@
             <div class="container">
               <h1 class="text-uppercase color-dark name">I’m Meng Xie</h1>
               <h4  class="text-uppercase color-dark font-alt job">Senior Software Engineer</h4>
-             <br/> <h1 ><a href="#about" id="defaultLoadClick"   ><i class="fa fa-angle-double-down" ></i></a></h1>
+             <br/> <h1 ><a    id="defaultLoadClick" class="link-inpage"  ><i class="fa fa-angle-double-down" ></i></a></h1>
             </div>
           </div>
         </div>
@@ -231,7 +234,7 @@
                 </p>
                   <p class="font-alt color-dark">  07/2022-10/2024 San Francisco Bay Area</p>
                 </div>
-              </li> 
+              </li>
               <li>
                 <div class="ic"><i class="fa fa-briefcase"></i></div>
                 <div class="number font-alt">02</div>
