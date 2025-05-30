@@ -51,7 +51,7 @@
                        el.trigger('reset');
                        el.find('.message-submit').html("Thanks I will get back!").removeClass('hidden');
                      
-                   }, 1000)
+                   }, 200)
         	}, function(err) {
         		  el.find('.message-submit').html("mail service is error!").removeClass('hidden');
         	});
