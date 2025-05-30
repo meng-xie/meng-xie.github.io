@@ -43,8 +43,8 @@
       $('#contactForm, #hireForm').submit(function() {
         var el = $(this);
         if (el.valid()) {
-        
-           emailjs.send("myxj128@gmail.com","template_f1u9RwXl",{name: $("input[name*='fullname']").val(), email: $("input[name*='email']").val() , note: $("textarea[name*='message']").val()  })
+
+           emailjs.send("service_0he6lpo","template_8okehxe",{name: $("input[name*='fullname']").val(), email: $("input[name*='email']").val() , message: $("textarea[name*='message']").val()  })
         	.then(function(response) {
         			setTimeout(function() {
                      el.find('.preload-submit').addClass('hidden');
