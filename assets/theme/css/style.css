@@ -1162,21 +1162,33 @@ textArea.form-flat {
 /*== ABOUT ==*/
 .my-profile {
   position: relative;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .my-profile .my-pict {
-  background-repeat:  no-repeat;
-  background-position:  inherit;
-  background-size:48% 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
   background-image: url(../images/my-pict.jpg);
-  position: absolute;
-  left:23%;
-  top: 0;
-  height: 100%;
+  position: relative;
+  flex: 0 0 40%;
+  min-height: 380px;
 }
 @media (max-width: 880px) {
+  .my-profile {
+    text-align: center;
+    display: block;
+  }
   .my-profile .my-pict {
     position: relative;
-    height: 300px;
+    width: 220px;
+    height: 220px;
+    left: 0;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
   }
 }
 .my-profile .my-pict .overfly {
@@ -1208,26 +1220,28 @@ textArea.form-flat {
 
 
 .my-profile .my-pict {
-  width: 49%;
-}
-@media (max-width: 380px) {
-
-  .my-profile .my-pict {
-    width: 40%;
-  }
+  width: 50%;
 }
 .my-desc {
- position: relative;
-   width:33%;
-   left:47.3%;
+  position: relative;
+  width: 50%;
+  left: auto;
+  flex: 1 1 50%;
 }
-.my-profile  .inner-text {
+.my-profile .inner-text {
   max-width: 585px;
-  padding:  40px;
+  padding: 40px;
 }
 @media (max-width: 880px) {
   .my-profile .inner-text {
-    max-width: 50%;
+    max-width: 100%;
+    padding: 20px;
+    background-position: top center;
+  }
+  .my-desc {
+    width: 100%;
+    left: 0;
+    margin-top: 20px;
   }
 }
 /*== SERVICES ==*/
@@ -1730,22 +1744,6 @@ textArea.form-flat {
 }
 .map-content i {
   margin-right: 2px;
-}
-
-.my-map-area{
-	   position: absolute;
-    width: 50%;
-    right: 0;
-    top: 0;
-    height: 100%;
-    border-left: 1px solid @white - 20;
-    background: @white - 10;
-    @media (max-width: @res_tab) {
-      position:relative;
-      height: 300px;
-      width: 100%;
-    }
-	
 }
 /*== TESTIMONIAL == */
 .box-testimonial {
