@@ -22,6 +22,7 @@ function myprint(){
    //@ts-ignore
    const { Map } = await google.maps.importLibrary("maps");
    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+   const { InfoWindow } = await google.maps.importLibrary("maps");
 
    // The map, centered at Uluru
    map = new Map(document.getElementById("map-contact"), {
@@ -35,6 +36,22 @@ function myprint(){
      map: map,
      position: position,
      title: "Uluru",
+   });
+
+   // Create info window with message
+   const infoWindow = new InfoWindow({
+     content: "<b>I live here!!</b>",
+   });
+
+   // Show info window automatically
+   infoWindow.open(map, marker);
+   
+   // Remove close button after info window opens
+   google.maps.event.addListener(infoWindow, 'domready', () => {
+     const closeButton = document.querySelector('.gm-ui-hover-effect');
+     if (closeButton) {
+       closeButton.style.display = 'none';
+     }
    });
  }
 

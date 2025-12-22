@@ -1728,6 +1728,8 @@ textArea.form-flat {
   position: absolute;
   height: 100%;
   width: 100%;
+  opacity: 0;
+  pointer-events: none;
 }
 .contact-area .map-area:hover {
   cursor: pointer;
