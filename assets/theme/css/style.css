@@ -556,6 +556,17 @@ blockquote {
 .menu-area .main-nav.no-space > li + li:before {
   content: "";
 }
+.menu-area .main-nav > li > a.highlight-link {
+  background-color: #0077b5;
+  color: #ffffff !important;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.menu-area .main-nav > li > a.highlight-link:hover {
+  background-color: #005885;
+  color: #ffffff !important;
+}
 .menu-area.nav-white-bg {
   border-bottom: 1px solid #ebebeb;
   background: #ffffff;
@@ -1919,6 +1930,14 @@ textArea.form-flat {
 .social-links a:hover {
   background: #ffffff;
   color: #000000;
+}
+.social-links a.highlight-link {
+  background: #0077b5 !important;
+  color: #ffffff !important;
+}
+.social-links a.highlight-link:hover {
+  background: #005885 !important;
+  color: #ffffff !important;
 }
 .end-line {
  color:white
